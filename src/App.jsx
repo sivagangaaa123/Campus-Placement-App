@@ -7,16 +7,21 @@ import AddRegistration from './components/AddRegistration'
 import SearchRegistration from './components/SearchRegistration'
 import DeleteRegistration from './components/DeleteRegistration'
 import ViewAllRegistrations from './components/ViewAllRegistrations'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <AddRegistration/>
-      <SearchRegistration/>
-      <DeleteRegistration/>
-      <ViewAllRegistrations/>
+      <BrowserRouter>
+      <Routes>
+<Route path='/' element={<AddRegistration/>} />
+<Route path='/search' element={<SearchRegistration/>} />
+<Route path='/delete' element={<DeleteRegistration/>} />
+<Route path='/view' element={<ViewAllRegistrations/>} />
+      </Routes>
+      </BrowserRouter>
     </>
   )
 }
