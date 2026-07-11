@@ -6,6 +6,7 @@ import './App.css'
 import AddRegistration from './components/AddRegistration'
 import SearchRegistration from './components/SearchRegistration'
 import DeleteRegistration from './components/DeleteRegistration'
+import ViewAllRegistrations from './components/ViewAllRegistrations'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
       <AddRegistration/>
       <SearchRegistration/>
       <DeleteRegistration/>
+      <ViewAllRegistrations/>
     </>
   )
 }
